@@ -7,16 +7,21 @@ body {
     margin: 0;
 }
 
-#matraz {
-    position: relative;
-    width: 200px;
-    height: 300px;
-    background-color: #ccc;
-    border: 2px solid #999;
+#lab {
+    display: flex;
     margin-bottom: 20px;
 }
 
-#agua, #vapor, #aguaDestilada {
+.matraz {
+    position: relative;
+    width: 150px;
+    height: 300px;
+    background-color: #ccc;
+    border: 2px solid #999;
+    margin: 0 20px;
+}
+
+.agua {
     position: absolute;
     width: 100%;
     background-color: #3498db;
@@ -25,10 +30,23 @@ body {
 
 #vapor {
     height: 50%;
+    display: none;
 }
 
-#aguaDestilada {
-    height: 20%;
+#refrigerante {
+    width: 10px;
+    height: 300px;
+    background-color: #999;
+    margin: 0 20px;
+}
+
+#descripcion {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#botones {
+    display: flex;
 }
 
 button {
