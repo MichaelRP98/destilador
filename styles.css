@@ -41,12 +41,14 @@ body {
     margin: 0 10px;
 }
 
-.mechero {
+#mechero {
     position: absolute;
-    bottom: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #6c757d;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 50px;
 }
 
 #descripcion {
@@ -70,6 +72,11 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+button:hover {
+    background-color: #0056b3;
+}
+
 
 button:hover {
     background-color: #0056b3;
