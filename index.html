@@ -7,14 +7,25 @@
     <title>Simulación de Destilación</title>
 </head>
 <body>
-    <div id="matraz">
-        <div id="agua"></div>
-        <div id="vapor"></div>
-        <div id="aguaDestilada"></div>
+    <div id="lab">
+        <div id="matraz1" class="matraz">
+            <div id="agua1" class="agua"></div>
+            <div id="vapor" class="vapor"></div>
+        </div>
+        <div id="refrigerante" class="refrigerante"></div>
+        <div id="matraz2" class="matraz">
+            <div id="aguaDestilada" class="agua"></div>
+        </div>
     </div>
-    <button onclick="iniciarCalentamiento()">Iniciar Calentamiento</button>
-    <button onclick="iniciarDestilacion()">Iniciar Destilación</button>
-    <button onclick="reiniciarSimulacion()">Reiniciar</button>
+    <div id="descripcion">
+        <h2>Experimento de Destilación</h2>
+        <p>En este experimento, calentaremos el agua en el matraz 1 usando un mechero. El vapor generado subirá por el refrigerante y condensará en el matraz 2 como agua destilada.</p>
+    </div>
+    <div id="botones">
+        <button onclick="encenderMechero()">Encender Mechero</button>
+        <button onclick="pasarVapor()">Pasar Vapor</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
+
