@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#matraz {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background-color: #ccc;
+    border: 2px solid #999;
+    margin-bottom: 20px;
+}
+
+#agua, #vapor, #aguaDestilada {
+    position: absolute;
+    width: 100%;
+    background-color: #3498db;
+    bottom: 0;
+}
+
+#vapor {
+    height: 50%;
+}
+
+#aguaDestilada {
+    height: 20%;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
