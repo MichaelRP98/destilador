@@ -10,7 +10,7 @@
     <div id="lab">
         <div id="matraz1" class="matraz">
             <div id="agua1" class="agua"></div>
-            <div id="vapor" class="vapor"></div>
+            <img src="mechero.png" alt="Mechero" class="mechero">
         </div>
         <div id="refrigerante" class="refrigerante"></div>
         <div id="matraz2" class="matraz">
@@ -22,8 +22,10 @@
         <p>En este experimento, calentaremos el agua en el matraz 1 usando un mechero. El vapor generado subirá por el refrigerante y condensará en el matraz 2 como agua destilada.</p>
     </div>
     <div id="botones">
+        <button onclick="agregarAgua()">Agregar Agua</button>
         <button onclick="encenderMechero()">Encender Mechero</button>
         <button onclick="pasarVapor()">Pasar Vapor</button>
+        <button onclick="llenarAguaDestilada()">Llenar Agua Destilada</button>
     </div>
     <script src="script.js"></script>
 </body>
