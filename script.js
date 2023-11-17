@@ -1,10 +1,15 @@
+let mecheroEncendido = false;
+
 function agregarAgua() {
     reiniciarSimulacion();
     document.getElementById('agua1').style.height = '80%';
 }
 
 function encenderMechero() {
-    document.getElementById('vapor').style.display = 'block';
+    if (!mecheroEncendido) {
+        document.getElementById('mechero').style.backgroundColor = '#ff8c00'; // Cambia a naranja
+        mecheroEncendido = true;
+    }
 }
 
 function pasarVapor() {
