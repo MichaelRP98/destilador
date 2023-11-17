@@ -1,16 +1,9 @@
-function iniciarCalentamiento() {
-    document.getElementById('agua').style.height = '80%';
+function encenderMechero() {
+    document.getElementById('agua1').style.height = '80%';
     document.getElementById('vapor').style.display = 'block';
-    setTimeout(iniciarDestilacion, 3000);
 }
 
-function iniciarDestilacion() {
+function pasarVapor() {
     document.getElementById('vapor').style.display = 'none';
-    document.getElementById('aguaDestilada').style.display = 'block';
-}
-
-function reiniciarSimulacion() {
-    document.getElementById('agua').style.height = '100%';
-    document.getElementById('vapor').style.display = 'none';
-    document.getElementById('aguaDestilada').style.display = 'none';
+    document.getElementById('aguaDestilada').style.height = '80%';
 }
