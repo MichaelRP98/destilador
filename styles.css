@@ -51,6 +51,17 @@ body {
     transform: translateX(-50%);
 }
 
+#tubo {
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    background-color: #ced4da;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
 #descripcion {
     text-align: center;
     margin-bottom: 20px;
@@ -72,11 +83,6 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
-button:hover {
-    background-color: #0056b3;
-}
-
 
 button:hover {
     background-color: #0056b3;
