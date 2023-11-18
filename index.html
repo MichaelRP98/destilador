@@ -3,32 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Simulación de Destilación</title>
+    <title>Simulación de Vertido de Agua</title>
+    <!-- Incluye jQuery (puedes cambiar la URL a la versión que prefieras) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        #animation-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            overflow: hidden;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <div id="lab">
-        <div id="matraz1" class="matraz">
-            <div id="agua1" class="agua"></div>
-            <div id="mechero" class="mechero"></div>
-            <div id="tubo"></div>
-        </div>
-        <div id="refrigerante" class="refrigerante"></div>
-        <div id="matraz2" class="matraz">
-            <div id="aguaDestilada" class="agua"></div>
-        </div>
-    </div>
-    <div id="descripcion">
-        <h2>Experimento de Destilación</h2>
-        <p>En este experimento, agregaremos agua al matraz 1, encenderemos el mechero, permitiremos que el agua se evapore y pase a través de un tubo horizontal al matraz 2, donde se llenará como agua destilada.</p>
-    </div>
-    <div id="botones">
-        <button onclick="agregarAgua()">Agregar Agua</button>
-        <button onclick="encenderMechero()">Encender Mechero</button>
-        <button onclick="evaporarAgua()">Evaporar Agua</button>
-        <button onclick="llenarAguaDestilada()">Llenar Agua Destilada</button>
-    </div>
-    <script src="script.js"></script>
+
+<h1>Simulación de Vertido de Agua</h1>
+<button onclick="startAnimation()">Iniciar Proceso 1</button>
+<div id="animation-container"></div>
+
+<script>
+    function startAnimation() {
+        var container = $("#animation-container");
+        container.html(""); // Limpiar el contenedor antes de iniciar la animación
+
+        var steps = [
+            "image1.png",
+            "image2.png",
+            "image3.png",
+            "image4.png"
+        ];
+
+        var currentStep = 0;
+
+        function animate() {
+            if (currentStep < steps.length) {
+                var img = $("<img>").attr("src", steps[currentStep]);
+                container.append(img);
+
+                currentStep++;
+
+                setTimeout(animate, 1000); // Intervalo de 1 segundo entre pasos
+            }
+        }
+
+        animate();
+    }
+</script>
+
 </body>
 </html>
 
